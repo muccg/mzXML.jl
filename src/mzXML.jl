@@ -15,8 +15,8 @@ struct MSscan{T<:AbstractFloat,TI<:Real}
     children::Vector{MSscan{T,TI}}
 end
 
-const empty32 = Array{MSscan{Float32,Float32}}(0)
-const empty64 = Array{MSscan{Float64,Float64}}(0)
+const empty32 = Array{MSscan{Float32,Float32}}[]
+const empty64 = Array{MSscan{Float64,Float64}}[]
 
 function index(filename)
     scanpositions = open(filename) do file
