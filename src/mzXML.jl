@@ -54,7 +54,7 @@ end
 function load(filename; maxlevel = 1)
     xdoc = parse_file(filename)
     xroot = root(xdoc)
-    if name(xroot) != "mzXML"
+    if name(xroot) != "mzXML" || name(xroot) != "indexedmzML"
         error("Not an mzXML file")
     end
 
